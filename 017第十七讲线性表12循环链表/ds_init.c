@@ -3,7 +3,7 @@
 /*初始化循环链表*/
 void ds_init(node **pNode)
 {
-    int item;
+    int item=0;
     node *temp;
     node *target;
 
@@ -14,21 +14,21 @@ void ds_init(node **pNode)
         scanf("%d", &item);
         fflush(stdin);
 
-		if(item == 0)
+		if(0 == item)
             return;
 
         if((*pNode) == NULL)
 		{ /*循环链表中只有一个结点*/
 			*pNode = (node*)malloc(sizeof(struct CLinkList));
 			
-			if(!(*pNode))
+			if(!(*pNode)){
+                printf("Mem Error!");
 				exit(0);
+            }
 			
 			(*pNode)->data = item;
 			(*pNode)->next = *pNode;
-		}
-        else
-		{
+		}else{
             /*找到next指向第一个结点的结点*/
             for(target = (*pNode); target->next != (*pNode); target = target->next)
 				;

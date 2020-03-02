@@ -5,8 +5,8 @@
 int main()
 {
     node *pHead = NULL;
-    char opp;
-    int find;
+    char opp=' ';
+    int find=0;
 
     printf("------------------- 循环链表 --------------------\n\n");
     printf("-------------------------------------------------------\n\n");
