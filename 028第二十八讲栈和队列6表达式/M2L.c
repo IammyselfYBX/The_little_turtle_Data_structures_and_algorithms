@@ -76,6 +76,7 @@ int main()
         Pop(&s, &e);
         printf("%c ", e);
     }
+    printf("\n");
 
     return 0;
 }
